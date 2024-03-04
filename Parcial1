@@ -1,0 +1,30 @@
+int linea = 10;
+int cuadrado = 20;
+void setup() {
+  size(530, 530);
+}
+
+void draw() {
+  background(255);
+
+  // Dibuja las figuras
+  line(0, 0, 8, 1);
+  point(0, 3);
+  point(5, 3);
+  rect(160, 4, 250, 250);
+  ellipse(4, 6, 5, 3);
+  line(0, linea, width, linea);
+  rect(0, cuadrado, width, cuadrado);
+  // Actualiza la posición de la línea para que se mueva
+  linea = linea + 1;
+  cuadrado = cuadrado + 1;
+
+
+  // Restablece la posición de la línea cuando llega al final del lienzo
+  if (linea > height) {
+    linea = 10;
+  }
+  if (cuadrado > height) {
+    cuadrado = 10;
+  }
+}
